@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'CommandButton',
+    name: 'Buttons',
     props: {
         name: {type: String, required: true},
         className: {type: String},

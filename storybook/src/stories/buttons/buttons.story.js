@@ -1,11 +1,11 @@
 import { action } from '@storybook/addon-actions'
-import CommandButton from '../../components/commandbutton.vue'
+import Buttons from '../../components/buttons.vue'
 
 import 'semantic-ui-css/semantic.min.css'
 
 export default {
-  title: 'CommandButton',
-  component: CommandButton,
+  title: 'Buttons',
+  component: Buttons,
   argTypes: {
     name: { control: 'text' },
     className: {
@@ -18,8 +18,8 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { CommandButton },
-  template: `<CommandButton :name="name" :className="className" :useDiv="useDiv" :isLoading="isLoading" @click="action" />`,
+  components: { Buttons },
+  template: `<Buttons :name="name" :className="className" :useDiv="useDiv" :isLoading="isLoading" @click="action" />`,
   methods: {
     action: action('button-clicked')
   }
