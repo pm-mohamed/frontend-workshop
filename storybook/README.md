@@ -59,16 +59,6 @@ The follwing figure is the map of this sample project.
   - webpack.config.js     Define webpack configuration.
 ```
 
-## Components
-There are the following components in this sample.
-
-|Component Name|File Name|Description|
-|:---|:---|:---|
-|Button|``commandbutton.vue``|The component that shows a button|
-|Input|``inputbox.vue``|The component that shows a item name and input box.|
-|Label|``labelgroup.vue``|The component that shows a item name and data.|
-|Select Box|``selectbox.vue``|The component that shows a select box.|
-
 
 ## Libraries
 This sample uses the following library.
