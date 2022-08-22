@@ -1,35 +1,36 @@
 //==============================================================================================
-// File Name: main.scss
+// File Name: _header.scss
 //----------------------------------------------------------------------------------------------
-// Primary entry point for application. Imports all other manifest files, including variables.
+// This file contains all styles related to the header layout.
+//----------------------------------------------------------------------------------------------
+// Provides structural definitions for the site's layout, such grids, dimensions, positioning,
+// z-indexes, margins, and padding.
+//----------------------------------------------------------------------------------------------
+// IMPORTANT: Skinning attributes such as font size, color, backgrounds, and gradients should
+// not be defined in layout; these should be handled elsewhere (e.g., /Base) to maintain
+// separation of concerns.
+//----------------------------------------------------------------------------------------------
+// NOTE: Since layout sections often map to exclusive parts of a page, it is acceptable to
+// use #ID selectors here (and ONLY here).
+//----------------------------------------------------------------------------------------------
+// NOTE: Layouts in this file should be migrated to individual files under /Layout and imported
+// if they get too long (say, over 10 selectors).
+//----------------------------------------------------------------------------------------------
+// Used by: main.scss
 //==============================================================================================
 
 //----------------------------------------------------------------------------------------------
-// IMPORT 1.BASE
+// IMPORTS
 //----------------------------------------------------------------------------------------------
-@import './base/fonts';
-@import './base/helpers';
-@import './base/typography';
+@import './../utils/colors.scss';
+@import './../utils/functions.scss';
+@import './../utils/mixins.scss';
+@import './../utils/variables.scss';
 
 //----------------------------------------------------------------------------------------------
-// IMPORT 2.COMPONENTS
+// VARIABLES
 //----------------------------------------------------------------------------------------------
-@import './components/buttons.scss';
 
 //----------------------------------------------------------------------------------------------
-// IMPORT 3.LAYOUT
+// CORE
 //----------------------------------------------------------------------------------------------
-@import './layout/header.scss';
-
-//----------------------------------------------------------------------------------------------
-// IMPORT 4.PAGES
-//----------------------------------------------------------------------------------------------
-@import './pages/plp';
-
-//----------------------------------------------------------------------------------------------
-// IMPORT 5.UTILS
-//----------------------------------------------------------------------------------------------
-@import './utils/colors';
-@import './utils/functions';
-@import './utils/mixins';
-@import './utils/variables';
