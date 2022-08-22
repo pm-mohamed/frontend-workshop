@@ -1,0 +1,60 @@
+{
+  "name": "storybook-vuejs-sample",
+  "version": "6.4.13",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build-storybook": "build-storybook",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "storybook": "start-storybook -p 9009 --no-manager-cache"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.7.8",
+    "babel-preset-vue": "^2.0.2",
+    "semantic-ui-css": "^2.4.1",
+    "vue": "^2.6.12",
+    "vuex": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-a11y": "6.4.13",
+    "@storybook/addon-actions": "6.4.13",
+    "@storybook/addon-backgrounds": "6.4.13",
+    "@storybook/addon-controls": "6.4.13",
+    "@storybook/addon-docs": "^6.4.13",
+    "@storybook/addon-interactions": "6.4.13",
+    "@storybook/addon-links": "6.4.13",
+    "@storybook/addon-storyshots": "6.4.13",
+    "@storybook/addon-storysource": "6.4.13",
+    "@storybook/addon-viewport": "6.4.13",
+    "@storybook/addons": "6.4.13",
+    "@storybook/jest": "^0.0.5",
+    "@storybook/source-loader": "6.4.13",
+    "@storybook/vue": "6.4.13",
+    "@storybook/preset-scss": "^1.0.3",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "@storybook/addon-essentials": "^6.4.14",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^3.4.1",
+    "file-loader": "^6.2.0",
+    "prop-types": "^15.7.2",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^15.9.6",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.46.0",
+    "webpack-dev-server": "^3.11.2",
+    "sass": "^1.49.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0"
+  },
+  "storybook": {
+    "chromatic": {
+      "projectToken": "cyxj0e38bqj"
+    }
+  }
+}
