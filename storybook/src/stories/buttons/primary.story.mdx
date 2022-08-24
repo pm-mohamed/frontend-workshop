@@ -1,0 +1,24 @@
+import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks'
+import Buttons from '../../components/buttons.vue'
+
+<Meta title="Buttons/Primary" Component={Buttons} />
+
+# Buttons
+
+<Preview>
+  <Story id="buttons--normal" height="60px" />
+</Preview>
+
+# Props
+
+<Props of={Buttons} />
+
+# Styles
+## Primary Style
+
+<Story name="primary" height="60px">
+  {{
+    components: { Buttons },
+    template: '<Buttons name="primary" className="primary" :useDiv="false" :isLoading="false" />',
+  }}
+</Story>
