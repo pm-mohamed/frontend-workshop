@@ -9,10 +9,10 @@
 //----------------------------------------------------------------------------------------------
 // IMPORTS
 //----------------------------------------------------------------------------------------------
-@import './../utils/colors.scss';
-@import './../utils/functions.scss';
-@import './../utils/mixins.scss';
-@import './../utils/variables.scss';
+@import "./../utils/colors.scss";
+@import "./../utils/functions.scss";
+@import "./../utils/mixins.scss";
+@import "./../utils/variables.scss";
 
 //----------------------------------------------------------------------------------------------
 // VARIABLES
@@ -29,41 +29,51 @@ $turquoise: #1abc9c;
 //----------------------------------------------------------------------------------------------
 
 .button {
-    box-sizing: border-box;
-    appearance: none;
-    background-color: transparent;
-    border: 2px solid $red;
-    border-radius: 0.6em;
-    color: $red;
-    cursor: pointer;
-    display: flex;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
-    margin: 20px;
-    padding: 1.2em 2.8em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-  
-    &:hover,
-    &:focus {
-      color: #fff;
-      outline: 0;
+  box-sizing: border-box;
+  appearance: none;
+  border: 2px solid $red;
+  border-radius: 0.6em;
+  color: $red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+  &.button--primary {
+    background-color: $turquoise;
+    border-color: $turquoise;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: $turquoise;
     }
 
-    &.button--primary {
-        border-color: $turquoise;
-        color: #fff;
-        box-shadow: 0 0 40px 40px $turquoise inset, 0 0 0 0 $turquoise;
-        transition: all 150ms ease-in-out;
-        
+    &.is-disabled {
+        background-color: #cdd5e0;
+        border-color: #cdd5e0;
+        color: $lightest;
+        cursor: not-allowed;
+
         &:hover {
-          box-shadow: 0 0 10px 0 $turquoise inset, 0 0 10px 4px $turquoise;
-          color:$turquoise;
-        }
-    }
+            box-shadow: unset;
+            border-color: #cdd5e0;
+          }
+      }
+  }
 }

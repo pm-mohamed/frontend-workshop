@@ -5,6 +5,7 @@ import {Story, Meta, Canvas, Props, Preview, Description} from '@storybook/addon
 export const Template = (args) => ({
     props: {
         text: { control: 'text' },
+        disabled: { control: 'boolean' },
         type: {
             options: {
                 Primary: 'button--primary',
@@ -15,7 +16,7 @@ export const Template = (args) => ({
             },
         },
     },
-    template: `<button class="button" :class="[type]">{{text}}</button>`,
+    template: `<button class="button" :class="[{'is-disabled': disabled, 'has-icon': icon}, type]">{{text}}</button>`,
 });
 
 <Description markdown={`# Buttons`}/>
