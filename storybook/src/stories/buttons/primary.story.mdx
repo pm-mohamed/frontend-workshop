@@ -1,24 +1,42 @@
-import { Story, Preview, Meta, Props } from '@storybook/addon-docs/blocks'
-import Buttons from '../../components/buttons.vue'
+import {Story, Meta, Canvas, Props, Preview, Description} from '@storybook/addon-docs';
 
-<Meta title="Components/Buttons/Primary" component={Buttons} />
+<Meta title="Components/Buttons/Primary" />
 
-# Primary Button
+export const Template = (args) => ({
+    props: {
+        text: { control: 'text' },
+        type: {
+            options: {
+                Primary: 'button--primary',
+                Secondary: 'button--secondary',
+            },
+            control: {
+                type: 'radio',
+            },
+        },
+    },
+    template: `<button class="button" :class="[type]">
+        {{text}}
+    </button>`,
+});
 
-<Preview>
-  <Story id="buttons--normal" height="60px" />
-</Preview>
+<Description markdown={`# Buttons`}/>
 
-# Props
+This contains definitions for all **Primary-Buttons**.
 
-<Props of={Buttons} />
+## All Primary Buttons Variations
 
-# Styles
-## Primary Style
-
-<Story name="primary" height="60px">
-  {{
-    components: { Buttons },
-    template: '<Buttons name="primary" className="primary" :useDiv="false" :isLoading="false" />',
-  }}
-</Story>
+<Canvas>
+  <Story name="Primary" args={{type: 'button--primary', text: 'Primary Button'}}>
+      { Template.bind({}) }
+  </Story>
+  <Story name="Primary - Disabled" args={{type: 'button--primary', text: 'Primary Button', disabled: true}}>
+      { Template.bind({}) }
+  </Story>
+  <Story name="Primary - loading" args={{type: 'button--primary', text: 'Primary Loading', loading: true}}>
+      { Template.bind({}) }
+  </Story>
+  <Story name="Primary - loading disabled" args={{type: 'button--primary', text: 'Primary Loading', disabled: true, loading: true}}>
+      { Template.bind({}) }
+  </Story>
+</Canvas>
