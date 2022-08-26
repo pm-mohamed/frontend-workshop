@@ -15,9 +15,7 @@ export const Template = (args) => ({
             },
         },
     },
-    template: `<button class="button" :class="[type]">
-        {{text}}
-    </button>`,
+    template: `<button class="button" :class="[type]">{{text}}</button>`,
 });
 
 <Description markdown={`# Buttons`}/>
@@ -26,7 +24,7 @@ This contains definitions for all **Primary-Buttons**.
 
 ## All Primary Buttons Variations
 
-<Canvas>
+<Canvas withToolbar isColumn>
   <Story name="Primary" args={{type: 'button--primary', text: 'Primary Button'}}>
       { Template.bind({}) }
   </Story>
