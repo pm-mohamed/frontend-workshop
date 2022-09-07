@@ -17,7 +17,7 @@ export const Template = (args) => ({
             },
         },
     },
-    template: `<button class="button" :class="[{'is-disabled': disabled, 'is-loading': loading}, type]">{{text}}</button>`,
+    template: `<button class="button" :class="[{'is-disabled': disabled, 'is-loading': loading}, type]"><span class="btn-text">{{text}}</span></button>`,
 });
 
 <Description markdown={`# Buttons`}/>
@@ -30,13 +30,13 @@ This contains definitions for all **Primary-Buttons**.
   <Story name="Primary" args={{type: 'button--primary', text: 'Primary Button',disabled: false, loading: false}}>
       { Template.bind({}) }
   </Story>
-  <Story name="Primary - Disabled" args={{type: 'button--primary', text: 'Primary Button', disabled: true, loading: false}}>
+  <Story name="Primary - Disabled" args={{type: 'button--primary', text: 'Primary Button Disabled', disabled: true, loading: false}}>
       { Template.bind({}) }
   </Story>
-  <Story name="Primary - loading" args={{type: 'button--primary', text: 'Primary Loading', disabled: false, loading: true}}>
+  <Story name="Primary - loading" args={{type: 'button--primary', text: 'Primary Button Loading', disabled: false, loading: true}}>
       { Template.bind({}) }
   </Story>
-  <Story name="Primary - loading disabled" args={{type: 'button--primary', text: 'Primary Loading', disabled: true, loading: true}}>
+  <Story name="Primary - loading disabled" args={{type: 'button--primary', text: 'Primary Button Disabled Loading', disabled: true, loading: true}}>
       { Template.bind({}) }
   </Story>
 </Canvas>

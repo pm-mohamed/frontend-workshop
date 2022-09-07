@@ -77,3 +77,24 @@ $turquoise: #1abc9c;
       }
   }
 }
+
+
+.is-loading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+      transform: rotate(0turn);
+  }
+
+  to {
+      transform: rotate(1turn);
+  }
+}
