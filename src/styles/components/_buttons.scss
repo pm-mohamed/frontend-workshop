@@ -31,33 +31,16 @@ $turquoise: #1abc9c;
 .button {
   // Rules affecting all buttons
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  appearance: none;
-  border: 2px solid $red;
   border-radius: 0.6em;
-  color: $red;
   cursor: pointer;
-  display: flex;
-  align-self: center;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
   padding: 1.2em 2.8em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
 
   &.button--primary {
     // Rules specific to button primary
+    border: 2px solid $turquoise;
     background-color: $turquoise;
-    border-color: $turquoise;
     color: #fff;
-    transition: all 150ms ease-in-out;
 
     &:hover {
       background-color: white;
@@ -67,13 +50,9 @@ $turquoise: #1abc9c;
     &.is-disabled {
       background-color: #cdd5e0;
       border-color: #cdd5e0;
-      color: $lightest;
       cursor: not-allowed;
 
       &:hover {
-        box-shadow: unset;
-        border-color: #cdd5e0;
-        background-color: #cdd5e0;
         color: $lightest;
       }
     }
@@ -98,10 +77,8 @@ $turquoise: #1abc9c;
   // Disabled and Loading Rules
     &.is-loading.is-disabled {
       &:hover {
-        box-shadow: unset;
         border-color: #cdd5e0;
         background-color: #cdd5e0;
-        color: $lightest;
       }
     }
   }
