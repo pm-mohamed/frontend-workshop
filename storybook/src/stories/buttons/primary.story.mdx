@@ -6,6 +6,7 @@ export const Template = (args) => ({
     props: {
         text: { control: 'text' },
         disabled: { control: 'boolean' },
+        loading: { control: 'boolean' },
         type: {
             options: {
                 Primary: 'button--primary',
@@ -16,7 +17,7 @@ export const Template = (args) => ({
             },
         },
     },
-    template: `<button class="button" :class="[{'is-disabled': disabled, 'has-icon': icon}, type]">{{text}}</button>`,
+    template: `<button class="button" :class="[{'is-disabled': disabled, 'is-loading': loading}, type]">{{text}}</button>`,
 });
 
 <Description markdown={`# Buttons`}/>
@@ -26,13 +27,13 @@ This contains definitions for all **Primary-Buttons**.
 ## All Primary Buttons Variations
 
 <Canvas withToolbar isColumn>
-  <Story name="Primary" args={{type: 'button--primary', text: 'Primary Button'}}>
+  <Story name="Primary" args={{type: 'button--primary', text: 'Primary Button',disabled: false, loading: false}}>
       { Template.bind({}) }
   </Story>
-  <Story name="Primary - Disabled" args={{type: 'button--primary', text: 'Primary Button', disabled: true}}>
+  <Story name="Primary - Disabled" args={{type: 'button--primary', text: 'Primary Button', disabled: true, loading: false}}>
       { Template.bind({}) }
   </Story>
-  <Story name="Primary - loading" args={{type: 'button--primary', text: 'Primary Loading', loading: true}}>
+  <Story name="Primary - loading" args={{type: 'button--primary', text: 'Primary Loading', disabled: false, loading: true}}>
       { Template.bind({}) }
   </Story>
   <Story name="Primary - loading disabled" args={{type: 'button--primary', text: 'Primary Loading', disabled: true, loading: true}}>
