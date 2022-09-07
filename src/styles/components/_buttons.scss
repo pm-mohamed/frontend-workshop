@@ -29,6 +29,7 @@ $turquoise: #1abc9c;
 //----------------------------------------------------------------------------------------------
 
 .button {
+  // Rules affecting all buttons
   box-sizing: border-box;
   appearance: none;
   border: 2px solid $red;
@@ -47,13 +48,8 @@ $turquoise: #1abc9c;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 
-  &:hover,
-  &:focus {
-    color: #fff;
-    outline: 0;
-  }
-
   &.button--primary {
+    // Rules specific to button primary
     background-color: $turquoise;
     border-color: $turquoise;
     color: #fff;
@@ -63,38 +59,45 @@ $turquoise: #1abc9c;
       background-color: white;
       color: $turquoise;
     }
-
+  // Disabled Rules
     &.is-disabled {
-        background-color: #cdd5e0;
+      background-color: #cdd5e0;
+      border-color: #cdd5e0;
+      color: $lightest;
+      cursor: not-allowed;
+
+      &:hover {
+        box-shadow: unset;
         border-color: #cdd5e0;
+        background-color: #cdd5e0;
         color: $lightest;
-        cursor: not-allowed;
-
-        &:hover {
-            box-shadow: unset;
-            border-color: #cdd5e0;
-          }
       }
-  }
-}
+    }
+  // Loading Rules
+    &.is-loading {
+      &:hover {
+        background-color: $turquoise;
+        color: white;
+      }
 
-
-.is-loading::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: button-loading-spinner 1s ease infinite;
-}
-
-@keyframes button-loading-spinner {
-  from {
-      transform: rotate(0turn);
-  }
-
-  to {
-      transform: rotate(1turn);
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 4px solid transparent;
+        border-top-color: #ffffff;
+        border-radius: 50%;
+        animation: button-loading-spinner 1s ease infinite;
+      }
+    }
+  // Disabled and Loading Rules
+    &.is-loading.is-disabled {
+      &:hover {
+        box-shadow: unset;
+        border-color: #cdd5e0;
+        background-color: #cdd5e0;
+        color: $lightest;
+      }
+    }
   }
 }
