@@ -17,9 +17,7 @@
 //----------------------------------------------------------------------------------------------
 // VARIABLES
 //----------------------------------------------------------------------------------------------
-$turquoise: #1abc9c;
-$grey: #cdd5e0;
-$lightest: #ffffff;
+
 //----------------------------------------------------------------------------------------------
 // CORE
 //----------------------------------------------------------------------------------------------
@@ -30,22 +28,22 @@ $lightest: #ffffff;
   align-items: center;
   border-radius: rem(10);
   cursor: pointer;
-  padding: rem(20) rem(20);
+  padding: rem(20) rem(45);
 
   &.button--primary {
     // Rules specific to button primary
-    border: rem(2) solid $turquoise;
-    background-color: $turquoise;
+    border: rem(2) solid $secondary;
+    background-color: $secondary;
     color: $lightest;
 
     &:hover {
       background-color: $lightest;
-      color: $turquoise;
+      color: $secondary;
     }
     // Primary Disabled Rules
     &.button--disabled {
-      background-color: $grey;
-      border-color: $grey;
+      background-color: $primary;
+      border-color: $primary;
       cursor: not-allowed;
 
       &:hover {
@@ -55,7 +53,7 @@ $lightest: #ffffff;
     // Primary Loading Rules
     &.button--loading {
       &:hover {
-        background-color: $turquoise;
+        background-color: $secondary;
         color: $lightest;
       }
 
@@ -73,8 +71,8 @@ $lightest: #ffffff;
     // Primary Disabled and Loading Rules
     &.button--loading.button--disabled {
       &:hover {
-        border-color: $grey;
-        background-color: $grey;
+        border-color: $primary;
+        background-color: $primary;
       }
     }
   }
