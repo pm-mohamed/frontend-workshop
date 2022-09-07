@@ -47,7 +47,7 @@ $turquoise: #1abc9c;
       color: $turquoise;
     }
   // Disabled Rules
-    &.is-disabled {
+    &.button--disabled {
       background-color: #cdd5e0;
       border-color: #cdd5e0;
       cursor: not-allowed;
@@ -57,7 +57,7 @@ $turquoise: #1abc9c;
       }
     }
   // Loading Rules
-    &.is-loading {
+    &.button--loading {
       &:hover {
         background-color: $turquoise;
         color: white;
@@ -75,7 +75,7 @@ $turquoise: #1abc9c;
       }
     }
   // Disabled and Loading Rules
-    &.is-loading.is-disabled {
+    &.button--loading.button--disabled {
       &:hover {
         border-color: #cdd5e0;
         background-color: #cdd5e0;

@@ -17,7 +17,7 @@ export const Template = (args) => ({
             },
         },
     },
-    template: `<button class="button" :class="[{'is-disabled': disabled, 'is-loading': loading}, type]"><span class="btn-text">{{text}}</span></button>`,
+    template: `<button class="button" :class="[{'button--disabled': disabled, 'button--loading': loading}, type]"><span class="btn-text">{{text}}</span></button>`,
 });
 
 <Description markdown={`# Buttons`}/>
