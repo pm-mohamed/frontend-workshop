@@ -30,6 +30,10 @@ $turquoise: #1abc9c;
 
 .button {
   // Rules affecting all buttons
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   appearance: none;
   border: 2px solid $red;
@@ -88,6 +92,7 @@ $turquoise: #1abc9c;
         border-top-color: #ffffff;
         border-radius: 50%;
         animation: button-loading-spinner 1s ease infinite;
+        margin-left: 10px;
       }
     }
   // Disabled and Loading Rules
