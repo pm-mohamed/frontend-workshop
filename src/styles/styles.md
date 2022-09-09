@@ -10,6 +10,7 @@ styles/
 |
 |– layout/
 |   |– _header.scss             # Header
+|   |– _product-card.scss       # Product card
 |
 |– pages/
 |   |– _plp.scss                # Product Listing Page
